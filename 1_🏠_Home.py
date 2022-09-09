@@ -1,11 +1,21 @@
 import streamlit as st
 from btools import BaseClass
 import pandas as pd
+st.set_page_config(layout="wide")
+
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
+
 
 text_df=pd.read_csv('text_source_for_web.csv')
 bc = BaseClass()
 
-st.set_page_config(layout="wide")
+
 
 # Customize the sidebar
 markdown = """
